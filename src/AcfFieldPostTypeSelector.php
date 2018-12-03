@@ -85,9 +85,9 @@ class AcfFieldPostTypeSelector extends acf_field {
 			'type'			=> 'select',
 			'name'			=> 'select_type',
 			'choices' => array(
-				acf_field_post_type_selector::SELECTOR_TYPE_SELECT => __( 'Select' ),
-				acf_field_post_type_selector::SELECTOR_TYPE_RADIO => __( 'Radio' ),
-				acf_field_post_type_selector::SELECTOR_TYPE_CHECKBOXES => __( 'Checkboxes' ),
+				self::SELECTOR_TYPE_SELECT => __( 'Select' ),
+				self::SELECTOR_TYPE_RADIO => __( 'Radio' ),
+				self::SELECTOR_TYPE_CHECKBOXES => __( 'Checkboxes' ),
 			)
 		));
 	}
@@ -142,7 +142,7 @@ class AcfFieldPostTypeSelector extends acf_field {
 
 		switch ( $field[ 'select_type' ] ) {
 
-			case acf_field_post_type_selector::SELECTOR_TYPE_SELECT:
+			case self::SELECTOR_TYPE_SELECT:
 
 				echo '<select id="' . $field[ 'name' ] . '" class="' . $field[ 'class' ] . '" name="' . $field[ 'name' ] . '">';
 
@@ -156,7 +156,7 @@ class AcfFieldPostTypeSelector extends acf_field {
 
 				break;
 
-			case acf_field_post_type_selector::SELECTOR_TYPE_RADIO:
+			case self::SELECTOR_TYPE_RADIO:
 
 				echo '<ul class="radio_list radio horizontal">';
 
@@ -177,7 +177,7 @@ class AcfFieldPostTypeSelector extends acf_field {
 
 				break;
 
-			case acf_field_post_type_selector::SELECTOR_TYPE_CHECKBOXES:
+			case self::SELECTOR_TYPE_CHECKBOXES:
 
 				echo '<ul class="checkbox_list checkbox">';
 
