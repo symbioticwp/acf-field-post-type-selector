@@ -129,9 +129,9 @@ class AcfFieldPostTypeSelector extends acf_field {
 
 		// not required: add emmpty/none value
 		if (!$field['required']) {
-			$obj = new stdClass();
+			$obj = new \stdClass();
 			$obj->name = "";
-			$obj->labels = new stdClass();
+			$obj->labels = new \stdClass();
 			$obj->labels->name = "None";
 			array_unshift ( $post_types, $obj);
 
